@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller"
+            fx:id="clientPane">
+
+    <padding> <Insets topRightBottomLeft="25"/> </padding>
+
+    <center>
+        <VBox fx:id="clientBox" spacing="10">
+            <Label fx:id="instructions" text="Type a list of 1 or more clients e.g 1,2,4 or everyone" />
+            <HBox fx:id="whoBox" spacing="10">
+                <Label fx:id="sendLabel" text="Send to"/>
+                <TextField fx:id="whoToMsg" prefWidth="300" text="everyone" />
+            </HBox>
+            <HBox fx:id="whatBox" spacing="10">
+                <TextField fx:id="textMsg" prefWidth="300" onAction="#send"
+                           promptText="type message here, press enter to send" />
+                <Button fx:id="sendB" text="Send" prefWidth="50" onAction="#send"/>
+            </HBox>
+            <ListView fx:id = "listItems2"/>
+        </VBox>
+    </center>
+</BorderPane>

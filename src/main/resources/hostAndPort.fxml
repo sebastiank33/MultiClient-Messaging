@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller"
+            prefHeight="400.0" prefWidth="600.0"
+            fx:id="hostPortPane">
+    <center>
+        <VBox fx:id = "hostPort" spacing="6">
+            <Label fx:id="hostLabel" text="Host IP Address (Change below)"/>
+            <TextField fx:id ="host" text="127.0.0.1" onAction="#connect"/>
+            <Label fx:id="portLabel" text="Port (Change below)"/>
+            <TextField fx:id ="port" text="5555" onAction="#connect"/>
+            <Button fx:id="connect" text="Connect" onAction="#connect"/>
+            <padding> <Insets topRightBottomLeft="50"/> </padding>
+        </VBox>
+    </center>
+</BorderPane>
